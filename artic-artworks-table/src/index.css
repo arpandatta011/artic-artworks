@@ -1,0 +1,105 @@
+/* Selection column header: checkbox first, then arrow */
+.p-datatable .p-column-header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+} 
+/* Ensure checkbox appears before the arrow icon */
+.p-datatable th.p-selection-column .p-column-header-content {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* Spinner bg change */
+.p-datatable .p-datatable-loading-overlay {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(2px);
+}
+
+/* Only keep this for overlay */
+.artwork-overlay-down.p-overlaypanel {
+  transform-origin: top !important;
+  margin-top: 200px !important;
+  margin-left: 10px;
+
+} /* Remove arrow triangle */
+.artwork-overlay-down.p-overlaypanel::before,
+.artwork-overlay-down.p-overlaypanel::after {
+  display: none !important;
+}
+
+/* Container layout */
+.custom-paginator {
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+}
+
+/* Keep report fully left */
+.custom-paginator .p-paginator-current {
+  margin-right: auto !important;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* REMOVE DEFAULT ICONS */
+.custom-paginator .p-paginator-prev .p-paginator-icon,
+.custom-paginator .p-paginator-next .p-paginator-icon {
+  display: none;
+}
+
+/* Replace with text */
+.custom-paginator .p-paginator-prev::after {
+  content: "Previous";
+}
+
+.custom-paginator .p-paginator-next::after {
+  content: "Next";
+}
+
+/* BUTTON BASE STYLE */
+.custom-paginator .p-paginator-page,
+.custom-paginator .p-paginator-prev,
+.custom-paginator .p-paginator-next {
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  margin: 0 4px;
+  border-radius: 6px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* PAGE NUMBERS - LIGHT BLUE*/
+.custom-paginator .p-paginator-page {
+  background-color: #e0f2fe;   
+  border: 1px solid #bae6fd;
+  color: #0369a1;
+}
+
+/* Hover effect */
+.custom-paginator .p-paginator-page:hover {
+  background-color: #bae6fd;
+}
+
+/* ACTIVE PAGE - STRONG BLUE */
+.custom-paginator .p-paginator-page.p-highlight {
+  background-color: #0ea5e9;
+  border-color: #0ea5e9;
+  color: white;
+}
+
+/* ALIGN CONTROLS RIGHT*/
+.custom-paginator .p-paginator-pages,
+.custom-paginator .p-paginator-prev,
+.custom-paginator .p-paginator-next {
+  display: flex;
+  align-items: center;
+}
